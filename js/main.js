@@ -14,6 +14,7 @@ function showMovie(movies) {
     const main_div=document.querySelector(".movies");
     const arr=Array.from(movies);
     arr.forEach(movie=>{
+      console.log(movie);
         const {poster_path,title,vote_average}=movie;
         const div=document.createElement("div");
         div.className="box";
@@ -39,7 +40,7 @@ function showMovie(movies) {
     })
     hover();
 }
-getMovies();
+document.addEventListener("DOMContentLoaded",getMovies());
 function hover(){
     var box=document.getElementsByClassName("box");
      for (var i = 0; i <box.length; i++) {
